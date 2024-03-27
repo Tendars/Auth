@@ -8,7 +8,8 @@ import androidx.lifecycle.ViewModel
 //import dagger.hilt.android.lifecycle.HiltViewModel
 
 //@HiltViewModel
-class SignUpViewModel: ViewModel() {
+class SignUpViewModel(val signUpcurrentStatus: SignUpcurrentStatus
+): ViewModel() {
     var text: String by  mutableStateOf("")
         private set
     fun changeValue(input:String){
