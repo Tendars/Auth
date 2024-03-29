@@ -86,6 +86,10 @@ dependencies {
 
 //    viewmodel
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+
+
+//    coroutine
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
 //...
 }
 kapt {
