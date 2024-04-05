@@ -11,8 +11,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.registerloginapp.store.presentation.signupscreen.SignUpUi
+import com.example.registerloginapp.store.presentation.userInfoScreen.UserListUi
 import com.example.registerloginapp.ui.theme.RegisterLoginAppTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +26,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    SignUpUi()
+//                    SignUpUi()
+                    UserListUi()
                 }
             }
         }
@@ -42,7 +46,8 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     RegisterLoginAppTheme {
-        SignUpUi()
+//        SignUpUi()
 //        Greeting("Android")
+        UserListUi()
     }
 }

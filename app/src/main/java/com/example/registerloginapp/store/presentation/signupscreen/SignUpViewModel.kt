@@ -5,11 +5,11 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-//import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-//@HiltViewModel
-class SignUpViewModel(val signUpcurrentStatus: SignUpcurrentStatus
-): ViewModel() {
+@HiltViewModel
+class SignUpViewModel @Inject constructor(): ViewModel() {
     var text: String by  mutableStateOf("")
         private set
     fun changeValue(input:String){
