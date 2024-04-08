@@ -21,13 +21,14 @@ class UserViewModel @Inject constructor(
 
 
 //    private val _userFlow: MutableStateFlow<List<UserData>> = MutableStateFlow(emptyList<UserData>())
-    private val _userFlow: MutableStateFlow<List<UserData>> = MutableStateFlow(emptyList())
-    val users : StateFlow<List<UserData>>  = _userFlow.asStateFlow()
+    private val _userFlow  = MutableStateFlow<Resource<List<UserData>>?>(null)
+    val users : StateFlow<Resource<List<UserData>>?>  = _userFlow.asStateFlow()
 //    Log.d("DAZ", "${users.value}")
     init {
         viewModelScope.launch {
-//           _users.value = Resource.Loading
+//            -_userFlow.value = Resource.Loading
             _userFlow.value = respository.getAllUsers()
+            Log.d("DAZ", "${respository.getAllUsers().}")
         }
     }
 }
