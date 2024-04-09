@@ -28,7 +28,7 @@ class UserViewModel @Inject constructor(
         viewModelScope.launch {
 //            -_userFlow.value = Resource.Loading
             _userFlow.value = respository.getAllUsers()
-            Log.d("DAZ", "${respository.getAllUsers().}")
+            Log.d("DAZ", "${respository.getAllUsers()}")
         }
     }
 }

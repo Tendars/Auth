@@ -6,6 +6,7 @@ import com.example.registerloginapp.store.domain.authRespository.UserInformation
 import com.example.registerloginapp.store.domain.model.UserData
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
+import io.ktor.client.call.receive
 import io.ktor.client.plugins.RedirectResponseException
 import io.ktor.client.request.*
 import javax.inject.Inject
@@ -16,7 +17,7 @@ class UserInformationImpl @Inject constructor(
     override suspend fun getAllUsers(): Resource<List<UserData>> {
         return try {
             Resource.Success(
-             httpClient.get { url("https://jsonplaceholder.typicode.com/albums") }.body()
+             httpClient.get { url("https://jsonplaceholder.typicode.com/albums") }.body<List<UserData>>()
             )
 
         } catch (e: Exception){
