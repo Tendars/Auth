@@ -2,7 +2,16 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="SignUpUiTest">
+        <State />
+      </entry>
       <entry key="app">
+        <State />
+      </entry>
+      <entry key="myButton()">
+        <State />
+      </entry>
+      <entry key="testTextField()">
         <State />
       </entry>
     </value>

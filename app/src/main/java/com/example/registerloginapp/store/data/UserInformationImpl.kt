@@ -3,6 +3,7 @@ package com.example.registerloginapp.store.data
 import android.util.Log
 import com.example.registerloginapp.store.data.network.Resource
 import com.example.registerloginapp.store.domain.authRespository.UserInformation
+import com.example.registerloginapp.store.domain.model.Student
 import com.example.registerloginapp.store.domain.model.UserData
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
@@ -26,6 +27,20 @@ class UserInformationImpl @Inject constructor(
 
         }
     }
+
+//    override suspend fun createUser(student: Student): Resource<UserData> {
+//        return try {
+//            Resource.Success(
+//                httpClient.post { url("https://jsonplaceholder.typicode.com/albums") }.setBody()
+//            )
+//
+//        } catch (e: Exception){
+//            e.printStackTrace()
+//            Resource.Failure(e)
+//
+//        }
+//    }
+
 //    override suspend fun getAllUsers():List<UserData> {
 //        return try {
 //
